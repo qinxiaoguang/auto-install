@@ -1,0 +1,49 @@
+name="auto_install"
+des="自动安装配置信息, 换机时，环境一键配置"
+os="mac" # or windows/ubuntu
+
+# shell环境配置
+[shell_env]
+bashrc=".conf/.bashrc"
+bash_profile=".conf/.bash_profile"
+
+# zsh配置
+[zsh]
+zshenv=".conf/.zshenv"
+zshrc=".conf/.zshrc"
+plugins=["zsh-autosuggestions","zsh-syntax-highlighting"]
+
+# TODO vim 配置
+[vim]
+path=""
+
+# 包管理工具
+[pkg_manager]
+use_ ="brew" # 使用brew, 默认安装brew
+install = ["python3", "autojump", "tmux"] # 安装内容
+cask_install=["alacritty"]
+priority=1
+
+[alacritty]
+alacritty=".conf/alacritty.yml"
+priority=2 # 确保在brew安装完alacrity之后，再配置这个
+
+[tmux]
+tmux_conf=".conf/.tmux.conf"
+tmux_conf_local=".conf/.tmux.conf.local"
+priority=2 # 确保在brew安装完alacrity之后，再配置这个
+
+# TODO pip3自动安装
+[pip3]
+install=["request"]
+priority=2
+
+# TODO golang自动安装
+[golang]
+version=""
+install_path=""
+conf_path=""
+
+# TODO rust没办法自动安装，毕竟本项目运行前提是rust已ready
+
+
