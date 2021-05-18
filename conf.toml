@@ -20,7 +20,7 @@ path=""
 # 包管理工具
 [pkg_manager]
 use_ ="brew" # 使用brew, 默认安装brew
-install = ["python3", "autojump", "tmux"] # 安装内容
+install = ["python3", "autojump", "tmux", "jq"] # 安装内容
 cask_install=["alacritty"]
 priority=1
 

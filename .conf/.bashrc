@@ -5,7 +5,7 @@
 alias gp="git branch | grep \"*\" | awk '{print \"git push origin HEAD:refs/for/\"\$2 | \"/bin/bash\"}'"
 alias gcn="(git pull || echo 0)&& git branch -r|tail -2 | head -1 | sed -e 's/origin\///g' | awk '{print \"git checkout \"\$1 | \"/bin/bash\"}'"
 alias gpull="git pull"
-alias gl="git log"
+alias gl="git log --graph --decorate --oneline --all"
 alias gc="git checkout"
 alias gs="git status"
 alias gm="git commit -m"
